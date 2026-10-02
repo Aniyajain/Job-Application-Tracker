@@ -1,11 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.jsx";
+import SignupPage from "./pages/SigupPage.jsx";
+import LoginPage from "./pages/LoginPage.jsx";
+import { BrowserRouter } from "react-router-dom";
 
-
-import LoginPage from './pages/LoginPage.jsx'
-
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <LoginPage />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </StrictMode>,
-)
+);

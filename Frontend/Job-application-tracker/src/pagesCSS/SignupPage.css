@@ -1,0 +1,87 @@
+/* .body{
+    margin: 0px;
+    padding: 0px;
+} */
+.logotitle1 {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-bottom: 1px solid gray;
+  color: #f5b501;
+  box-shadow: 1px 2px 3px gray;
+}
+.content1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* text-align: center; */
+    margin-top: 80px;
+}
+.google{
+     text-align: center;
+    color: white;
+    justify-content: center;
+    background-color: #f5b501;
+    border-radius: 40px;
+    width: 310px;
+    padding: 10px;
+    display: flex;
+      gap: 10px;
+      font-weight: 700;
+}
+.google:hover {
+  background-color: #e9ab02;
+}
+.Linkedin{
+     display: flex;
+     /* flex-direction: row; */
+    /* align-items: center; */
+    justify-content: center;
+    color: black;
+    background-color: #d3d3d3cf;
+    border-radius: 40px;
+    width: 310px;
+    padding: 10px;
+    margin: 10px;
+      gap: 10px;
+      margin-top: 20px;
+      font-weight: 700;
+}
+.Linkedin:hover{
+    background-color: rgb(247, 222, 112);
+    /* border: 1px solid black; */
+}
+h1{
+    color:#f5b501;
+}
+.termofuse{
+    color: grey;
+    margin-top: 100px;
+}
+.getStart{
+    /* color: white; */
+    background-color: #f5b501;
+    border-radius: 40px;
+    text-align: center;
+    width: 130px;
+    height: 25px;
+    padding: 8px;
+    font-weight: bold;
+    margin: 10px;
+}
+.getStart:hover{
+background-color: rgb(247, 222, 112);
+}
+input{
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid black;
+    height: 18px;
+    padding: 10px;
+}
+h4{
+    font-size: large;
+}
+.withemail{
+    margin: 10px;
+}
