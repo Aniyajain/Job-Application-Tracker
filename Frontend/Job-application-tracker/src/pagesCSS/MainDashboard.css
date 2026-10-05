@@ -1,0 +1,222 @@
+.bdy{
+    margin: 0px;
+    padding: 0px;
+}
+.topalignment1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+.bell{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.user{
+    display: flex;
+    gap: 30px;
+    margin-right: 20px;
+    margin-top: 6px;
+}
+.bell >div:first-child{
+    position : relative;
+}
+.bell > div:first-child svg{
+    position : absolute;
+    right: 10px;
+    top: 18%;
+
+}
+.BottomContent{
+    display: flex;
+}
+.pt1{
+    border-right: 2px solid rgb(146, 145, 145);
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+   padding: 20px;
+     margin: 0px;
+     background-color: #fef8ed;
+     width: 20%;
+     justify-content: space-between;
+     border-radius: 12px;
+}
+.time{
+    color: gray;
+    font-size: small;
+}
+.status{
+    font-size: large;
+     font-weight: 600;
+}
+.Company{
+    font-size: small;
+   
+    color: gray;
+    margin-top: 6px;
+}
+.goal{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: larger;
+    color: red;
+    width: 240px;
+    padding: 10px;
+    background-color: #f9cf66;
+    border-radius: 10px;
+
+}
+.pt2{
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid grey;
+    /* margin-left: 100px; */
+    width: 55%;
+    padding: 10px;
+    /* background-color: aquamarine; */
+    
+}
+.pt3{
+    border-right: 1px solid grey;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    margin-left: 19px;
+}
+.bx1pt3{
+    border:1px solid #f9cf66;
+    border-radius: 18px;
+    box-shadow: 2px 2px 3px #f9cf66;
+    width: 300px;
+    height: 160px;
+    padding: 10px;
+}
+.bx2pt3{
+    margin-top: 17px;
+    border:1px solid #f9cf66;
+    border-radius: 18px;
+    box-shadow: 2px 2px 3px #f9cf66;
+    width: 310px;
+    height: 360px;
+    padding: 10px;
+
+}
+.applied{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.788);
+    padding: 10px;
+}
+.ViewAct{
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #f5b501;
+}
+.recentAct{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #f5b501;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quickAct{
+    font-size: 26px;
+    color: #f5b501;
+    font-weight: 600;
+  
+}
+.Browsejobs{
+    background-color: #f5b501;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    
+    gap: 10px;
+}
+.bt1{
+     display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: larger;
+    color: rgb(109, 108, 108);
+    width: 240px;
+    padding: 10px;
+   
+    
+}
+.bt1:hover{
+    background-color: #f9cf66;
+    border-radius: 10px;
+    color: black;
+}
+.pt2top{
+    /* background-color: #f5b501; */
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 18px;
+    justify-content: space-between;
+}
+.userName{
+    color: #f5b501;
+    font-size: 30px;
+}
+.stats1{
+    background-color: #f3e9d2;
+    border: 1px solid yellow;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+.iconSize{
+     margin-top: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    /* background-color: rgb(215, 250, 215); */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    /* padding:10px; */
+}
+.App{
+    font-size: larger;
+    margin-bottom: 8px;
+}
+.updateInStats{
+    font-size: small;
+    color: green;
+    margin-top: 20px;
+}
+.statsArrange{
+    display: flex;
+    flex-direction: row;
+}
+.pt2bx3{
+    background-color: #f7efdc;
+    border-radius: 6px;
+    width: 680px;
+    height: 300px;
+    margin-top: 18px;
+    padding: 12px;
+     border: 1px solid yellow;
+}
