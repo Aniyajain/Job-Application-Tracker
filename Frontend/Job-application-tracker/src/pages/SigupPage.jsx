@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import IITDLOGO from "../assets/IITDLOGO.png";
 import "../pagesCSS/SignupPage.css";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 function SignupPage(){
     const navigate = useNavigate();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const userRegister = async()=>{
+        const response = await axios.post("http://localhost:5000/api/createUser",
+            {
+                Email : email,
+                Password : password,
+            }
+        )
+        
+        console.log(response.data);
+        
+    }
     return(
         <div>
 <div>
@@ -21,8 +35,10 @@ function SignupPage(){
     <div className="google"> <img src="https://images.rapidload-cdn.io/spai/ret_blank,q_lossless,to_avif,w_460,h_460/https://estateandprobatelawyer.com/wp-content/uploads/2025/05/Google-2025-G-logo.webp" alt="loading..." style={{width: "30px" , height: "24px" , borderRadius: "50%"}} />Continue with Google </div>
     <div className="Linkedin"> <img src="https://th.bing.com/th/id/OIP.NN_29U5mI6l_KAfhsxQksgHaHa?w=179&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" alt="loading..." style={{width: "30px" , height: "24px" , borderRadius: "50%"}}  />Continue with LinkedIn </div>
     <div className="withemail">or signup with your email</div>
-    <input type="email"  />
-    <div className="getStart">Get Started</div>
+    <input type="email" placeholder="Email" value={email} onChange={(e)=>setEmail(e.target.value)} />
+    <br />
+    <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
+    <div className="getStart" onClick={userRegister}>Get Started</div>
     <div>Already a Member? <span style={{ color:"#f5b501"}} onClick={()=>navigate("/createacc")}>Sign In</span></div>
     <div className="termofuse">By signing up, I agree to the Terms of Use and Privacy Policy</div>
  </div>

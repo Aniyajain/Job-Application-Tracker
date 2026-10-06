@@ -1,6 +1,6 @@
 import react from "react";
 import {useNavigate} from "react-router-dom";
-import {  Bell , CircleUser , Search , House, LayoutGrid ,SquarePlus, Bookmark, LogOut , Goal, ChartLine,Handshake , Clock9, X ,SquareText, Clock , Check, ArrowRight, MoveUp , CalendarDays } from "lucide-react";
+import {  Bell , CircleUser , Search , House, LayoutGrid ,SquarePlus, Bookmark, LogOut , Goal, ChartLine,Handshake , Clock9, X ,SquareText, Clock , Check, ArrowRight, MoveUp , CalendarDays, BriefcaseBusiness, MoveDown, MoveRight } from "lucide-react";
 import IITDLOGO from "../assets/IITDLOGO.png";
 import "../pagesCSS/MainDashboard.css";
 
@@ -49,39 +49,97 @@ function MainDashboard(){
                     <div className="pt2top">
                        <div>
                          <div className="userName">Hey! Aniya </div>
-                         <div>Track your job applications, stay organised , and never miss opportunity</div>
+                         <div className="tagline">Track your job applications, stay organised , and never miss opportunity</div>
                        </div>
-                        <div> <CalendarDays />Mon , 05 Oct 2026</div>
+                        <div className="todaydate"> <CalendarDays />Mon , 05 Oct 2026</div>
                     </div>
                    <div className="statsArrange">
                      <div className="stats1">
-                        <div className="iconSize"><SquareText  style={{color:"white" , backgroundColor: "#f5b501"}}/></div>
+                        <div className="iconSize"><SquareText  style={{color:"white" , backgroundColor: "#f5b501", borderRadius: "20px"}}/></div>
                         <div className="App">Total Application</div>
-                        <div className="App">8</div>
+                        <div className="count">8</div>
                         <div className="updateInStats"> <MoveUp  size={13}/> + 2 this week</div>
                     </div>
-                     <div className="stats1">
-                        <div className="iconSize"><SquareText  style={{color:"white" , backgroundColor: "#f5b501"}}/></div>
-                        <div className="App">Total Application</div>
-                        <div className="App">8</div>
-                        <div className="updateInStats"> <MoveUp  size={13}/> + 2 this week</div>
+                     <div className="stats2">
+                        <div className="iconSize"><Check  style={{color:"white" , backgroundColor: "green", borderRadius: "20px"}}/></div>
+                        <div className="App">Interviews</div>
+                        <div className="count">2</div>
+                        <div className="updateInStats"> <MoveUp  size={11}/> + 1 this week</div>
                     </div>
-                    <div className="stats1">
-                        <div className="iconSize"><SquareText  style={{color:"white" , backgroundColor: "#f5b501"}}/></div>
-                        <div className="App">Total Application</div>
-                        <div className="App">8</div>
-                        <div className="updateInStats"> <MoveUp  size={13}/> + 2 this week</div>
+                     <div className="stats3">
+                        <div className="iconSize"><Clock  style={{color:"white" , backgroundColor: "blue", borderRadius: "20px"}}/></div>
+                        <div className="App">Pending</div>
+                        <div className="count">4</div>
+                        <div className="updateInStats"> No Change</div>
                     </div>
-                    <div className="stats1">
-                        <div className="iconSize"><SquareText  style={{color:"white" , backgroundColor: "#f5b501"}}/></div>
-                        <div className="App">Total Application</div>
-                        <div className="App">8</div>
-                        <div className="updateInStats"> <MoveUp  size={13}/> + 2 this week</div>
+                    <div className="stats4">
+                        <div className="iconSize"><X   style={{color:"white" , backgroundColor: "red", borderRadius: "20px"}}/></div>
+                        <div className="App">Rejected</div>
+                        <div className="count">8</div>
+                        <div className="updateInStats"> <MoveDown size={10}/> + 2 this week</div>
                     </div>
+                   
                     
                    </div>
                    <div className="pt2bx3">
-                    <div>Recent Applications</div>
+                    <div className="briefcase">
+                        <div className="RecentIcon"> <BriefcaseBusiness size={29} style={{color: "#f5b501"}}/>Recent Applications</div>
+                    <div className="ViewAll">View All <MoveRight /></div>
+                    </div>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr className="headingrow">
+                                    <th>Company </th>
+                                    <th>Role</th>
+                                    <th>Applied On</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                                <tr className="dataOfTable">
+                                    <td>TCS</td>
+                                    <td>Software Developer Intern</td>
+                                    <td>Sep 28, 2025</td>
+                                    <td><span className="interview">Interview</span></td>
+                                    <td>...</td>
+  
+                                </tr>
+                                <tr className="dataOfTable">
+                                    <td>Accenture</td>
+                                    <td>Web Developer Intern</td>
+                                    <td>Sep 26, 2025</td>
+                                    <td> <span className="Applied">Applied</span></td>
+                                    <td>...</td>
+                                </tr>
+                                <tr className="dataOfTable">
+                                    <td>Flipkart</td>
+                                    <td>Research Intern</td>
+                                    <td>Aug 28, 2026</td>
+                                    <td>
+                                        <span className="Applied">Applied</span>
+                                    </td>
+                                    <td>...</td>
+
+                                </tr>
+                                <tr className="dataOfTable">
+                                     <td>Google</td>
+                                    <td>Software Engineer Intern</td>
+                                    <td>July 28, 2025</td>
+                                    <td>
+                                        <span className="interview">Interview</span>
+                                    </td>
+                                    <td>...</td>
+                                </tr>
+                                <tr className="dataOfTable">
+                                    <td>Microsoft</td>
+                                    <td>SDE Intern</td>
+                                    <td>Sep 28, 2025</td>
+                                    <td > <span className="Reject">Rejected</span></td>
+                                    <td>...</td>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
                    </div>
                 </div>
                 <div className="pt3">
