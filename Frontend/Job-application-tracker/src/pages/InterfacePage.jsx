@@ -1,12 +1,12 @@
 import React from "react";
 import IITDLOGO from "../assets/IITDLOGO.png";
-import "../pagesCSS/Loginpage.css";
+import "../pagesCSS/InterfacePage.css";
 import applicationTracker from "../assets/application tracker main page.jpeg";
 import { ChevronDown, Bookmark, Lightbulb, CircleGauge } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import SignupPage from "./SigupPage";
+import SignupPage from "./CreateSignUp";
 
-function LoginPage() {
+function InterfacePage() {
   const navigate = useNavigate();
   return (
     <div>
@@ -31,7 +31,7 @@ function LoginPage() {
           <div id="signbtn" onClick={() => navigate("/signup")}>
             Signup
           </div>
-          <div id="login" onClick={()=> navigate("/createacc")}>Login</div>
+          <div id="login" onClick={()=> navigate("/login")}>Login</div>
         </div>
       </div>
       <div className="img">
@@ -85,4 +85,4 @@ function LoginPage() {
   );
 }
 
-export default LoginPage;
+export default InterfacePage;

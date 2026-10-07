@@ -1,24 +1,51 @@
 import React, { useState } from "react";
 import IITDLOGO from "../assets/IITDLOGO.png";
-import "../pagesCSS/SignupPage.css";
+import "../pagesCSS/CreateSignUp.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-function SignupPage(){
+import {ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+function CreateSignUp(){
     const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const userRegister = async()=>{
-        const response = await axios.post("http://localhost:5000/api/createUser",
+        try {
+            const response = await axios.post("http://localhost:5000/api/createUser",
             {
                 Email : email,
                 Password : password,
             }
+            
         )
-        
+        if(response.status == 201){
+            toast.success("Account created Successfully");
+            setTimeout(()=>{
+                navigate("/login");
+            }, 1000);
+
+            
+        }
+       
         console.log(response.data);
+            
+        } catch (error) {
+            if(error.response?.status == 409){
+                toast.info("User with this email already exists");
+            }
+            else if(error.response?.status == 400){
+                toast.warning("Enter Valid Email && Password");
+
+            }
+            else{
+                toast.error("Something went wrong");
+            }
+            
+        }
         
     }
     return(
+         <>
         <div>
 <div>
     <div className="logotitle1">
@@ -29,6 +56,7 @@ function SignupPage(){
              onClick={()=> navigate("/")}  />
               <h1>Job Application Tracker</h1>
             </div>
+            <ToastContainer/>
  <div className="content1">
        <h1>Build an interview-ready resume in less time</h1>
     <h4>Join over 4 Million Teal Members and unlock your full career potential.</h4>
@@ -39,11 +67,14 @@ function SignupPage(){
     <br />
     <input type="password" placeholder="Password" value={password} onChange={(e)=>setPassword(e.target.value)} />
     <div className="getStart" onClick={userRegister}>Get Started</div>
-    <div>Already a Member? <span style={{ color:"#f5b501"}} onClick={()=>navigate("/createacc")}>Sign In</span></div>
+    <div>Already a Member? <span style={{ color:"#f5b501"}} onClick={()=>navigate("/login")}>Sign In</span></div>
     <div className="termofuse">By signing up, I agree to the Terms of Use and Privacy Policy</div>
  </div>
+
 </div>
+
         </div>
+         </>
     )
 }
-export default SignupPage;
+export default CreateSignUp;

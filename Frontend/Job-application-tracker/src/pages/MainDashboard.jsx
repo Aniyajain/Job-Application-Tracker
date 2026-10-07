@@ -3,9 +3,16 @@ import {useNavigate} from "react-router-dom";
 import {  Bell , CircleUser , Search , House, LayoutGrid ,SquarePlus, Bookmark, LogOut , Goal, ChartLine,Handshake , Clock9, X ,SquareText, Clock , Check, ArrowRight, MoveUp , CalendarDays, BriefcaseBusiness, MoveDown, MoveRight } from "lucide-react";
 import IITDLOGO from "../assets/IITDLOGO.png";
 import "../pagesCSS/MainDashboard.css";
+import { useLocation } from "react-router-dom";
 
 function MainDashboard(){
     const navigate  = useNavigate();
+    const location = useLocation();
+
+    const email = location.state?.email;
+    const name = email?.split("@")[0];
+    const displayName  = name? name.charAt(0).toUpperCase() + name.slice(1): "";
+
     return(
         <div className="bdy">
             <div className="Topheading">
@@ -48,7 +55,7 @@ function MainDashboard(){
                 <div className="pt2">
                     <div className="pt2top">
                        <div>
-                         <div className="userName">Hey! Aniya </div>
+                         <div className="userName">Hey! {displayName} </div>
                          <div className="tagline">Track your job applications, stay organised , and never miss opportunity</div>
                        </div>
                         <div className="todaydate"> <CalendarDays />Mon , 05 Oct 2026</div>
