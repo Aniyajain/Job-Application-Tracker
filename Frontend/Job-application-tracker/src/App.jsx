@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import InterfacePage from "./pages/InterfacePage";
 import CreateSignUp from "./pages/CreateSignUp";
 import MainDashboard from "./pages/MainDashboard";
+import AddApplication from "./pages/AddApplication";
 
 function App(){
     return (
@@ -13,6 +14,7 @@ function App(){
             <Route path="/signup" element={<CreateSignUp/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/Main" element={<MainDashboard/>}/>
+            <Route path="/Add" element={<AddApplication/>}/>
         </Routes>
       
     )

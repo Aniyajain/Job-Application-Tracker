@@ -44,7 +44,7 @@ function MainDashboard(){
                     <div>
                         <div className="bt1"> <House   /> Dashboard</div>
                     <div className="bt1"> <LayoutGrid />Application</div>
-                    <div className="bt1"> <SquarePlus />Add Applications</div>
+                    <div className="bt1" onClick={()=>(navigate("/Add"))}> <SquarePlus />Add Applications</div>
                     <div className="bt1"> <Bookmark />Saved Jobs</div>
                     <div className="bt1"> <CircleUser  />Profile</div>
                     <div className="bt1"> <LogOut />Logout</div>
