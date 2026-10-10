@@ -1,6 +1,6 @@
 import react from "react"
 import "../pagesCSS/AddApplication.css";
-import {Search ,Bell, CircleUser, LogOut, Bookmark , SquarePlus, LayoutGrid , House, Goal, BriefcaseBusiness, MapPin, ChartNoAxesColumnIncreasing, IndianRupee , RotateCcw }from "lucide-react";
+import {Search ,Bell, CircleUser, LogOut, Bookmark , SquarePlus, LayoutGrid , House, Goal, BriefcaseBusiness, MapPin, ChartNoAxesColumnIncreasing, IndianRupee , RotateCcw, StarCheck , SquareArrowOutUpRight}from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import IITDLOGO from "../assets/IITDLOGO.png";
 function AddApplication(){
@@ -32,7 +32,7 @@ function AddApplication(){
         
              <div className="pt1">
                     <div>
-                        <div className="bt1"> <House   /> Dashboard</div>
+                        <div className="bt1" onClick={()=>navigate("/Main")}> <House   /> Dashboard</div>
                     <div className="bt1"> <LayoutGrid />Application</div>
                     <div className="bt1" onClick={()=>(navigate("/Add"))}> <SquarePlus />Add Applications</div>
                     <div className="bt1"> <Bookmark />Saved Jobs</div>
@@ -46,32 +46,43 @@ function AddApplication(){
         
         
             <div className="pt2">
-                <div className="Headlinept2"> <BriefcaseBusiness size={34}/>Find Next Opportunity</div>
+                <div className="Headlinept2"> <BriefcaseBusiness size={32}/>Find Next Opportunity</div>
                 <div className="Subheadingpt2">Search and explore the latest job openings. Apply to your dream jobs abd keep track of them here. </div>
-                <div className="searchDetails">
-                    <div>Search Jobs</div>
-                    <input type="search" placeholder="e.g. Software Engineer , React, etc" />
-                    <div> <MapPin />Location</div>
-                    <select >
+                <div className="resultJob">
+                    <div className="searchDetails">
+                    <div className="searchJobs">Search Jobs</div>
+                    <input type="search" placeholder="e.g. Software Engineer , React, etc" className="dropdownCity"  />
+                    <div  className="rupee"> <MapPin  size={19} style={{color : "black"}}/>Location</div>
+                    <select  className="dropdownCity">
+                        <option value="">Any Location </option>
                         <option value="">Delhi</option>
                         <option value="">banglore</option>
                         <option value="">Mumbai</option>
                         <option value="">Pune</option>
                         <option value="">Hydrabad</option>
                     </select>
-                    <div> <BriefcaseBusiness/>Job Type</div>
-                   <div>
-                    <input type="checkbox" name="" id="" />
-                   <label>Full Time</label>
-                   <input type="checkbox" name="" id="" />
-                   <label>Part Time</label>
-                   <input type="checkbox" name="" id="" />
-                   <label>Internship</label>
-                   <input type="checkbox" name="" id="" />
-                   <label>Contract</label>
+                    <div  className="rupee"> <BriefcaseBusiness size={19} style={{color : "black"}}/>Job Type</div>
+                   <div className="jobType">
+                   <div className="timeJob">
+                     <input type="checkbox" name="" id="" style={{accentColor: "#f5b501"}} />
+                   <label className="label">Full Time</label>
                    </div>
-                   <div><ChartNoAxesColumnIncreasing /> Experience</div>
-                    <select >
+                   <div className="timeJob">
+                   <input type="checkbox" name="" id=""  style={{accentColor: "#f5b501"}}/>
+                   <label className="label" >Part Time</label>
+                   </div>
+                   <div className="timeJob">
+                   <input type="checkbox" name="" id="" style={{accentColor: "#f5b501"}}/>
+                   <label className="label">Internship</label>
+                   </div>
+                   <div className="timeJob">
+                   <input type="checkbox" name="" id="" style={{accentColor: "#f5b501"}} />
+                   <label className="label">Contract</label>
+                   </div>
+                   </div>
+                   <div className="rupee"><ChartNoAxesColumnIncreasing size={19} style={{color : "black"}} /> Experience</div>
+                    <select className="dropdownCity">
+                        <option value="">Any Experience</option>
                         <option value="">0-1 Years</option>
                         <option value="">2-3 Years</option>
                         <option value="">3-4 Years</option>
@@ -79,16 +90,76 @@ function AddApplication(){
                         <option value="">5 + Years</option>
                     </select>
 
-                    <div><IndianRupee /> Salary Range (LPA) </div>
-                    <input type="number" placeholder="Min"  /> - <input type="number" placeholder="Max" />
+                    <div className="rupee"><IndianRupee size={19} style={{color : "black"}} /> Salary Range (LPA) </div>
+                    <div className="alignSalary">
+                        <div ><input type="number" placeholder="Min" className="MinSalary" /> </div> - <div><input type="number" placeholder="Max"  className="MinSalary"/></div>
+                    </div>
 
                     <div className="btns">
                         <button className="btnReset"> <RotateCcw />Reset</button>
-                     <button  className="btnSearch">Search</button>
+                     <button  className="btnSearch"> <Search  size={19}/> Search</button>
                     </div>
 
 
 
+                </div>
+                
+                <div className="allResult">
+                    <div className="sByside">
+                        <div className="titleResult">Showing 10 results for <span style={{color: "#f5b501"}}>"Software Engineer"</span>
+                         in <span style={{color: "#f5b501"}} >"India"</span> </div>
+                    <div className="TimeDivisionJob">
+                        <div className="sort">Sort By: </div>
+                        <select className="recentJobs">
+                            <option >Most Recent</option>
+                            <option >Last Week</option>
+                            <option> Last Month</option>
+                        </select>
+                    </div>
+                    </div>
+                    <div className="Googlejob">
+                        <img src="https://yt3.googleusercontent.com/r99eRlOesQkJe7pOzDY4JazAlhidoVp-0syxBnYjfeHdmUXGa5zOxcozaxKF2oPHg3RkglecZQ=s900-c-k-c0x00ffffff-no-rj" alt="loading..." style={{width: "50px" , height: "50px", borderRadius: "40px" , marginTop: "28px", marginRight: "10px"}} />
+                        <div className="Software">
+                            <div className="RoleName">Software Engineer</div>
+                        <div className="companyName">Google</div>
+                        <div className="joiningdetail">
+                            <div className="iconAll"> <MapPin  size={13} /> Bangalore, India</div>
+                        <div  className="iconAll"> <BriefcaseBusiness size={13}/> Full Time</div>
+                        <div  className="iconAll"><StarCheck size={13} />0-2 Yrs</div>
+                        </div>
+                        <div className="jobdescript">Work on scalable systems and help build products used by billions..</div>
+                        </div>
+                        <div>
+                            <div className="iconAll" style={{color: "#f5b501" , fontWeight: "600",marginTop: "20px", fontSize: "20px", marginLeft: "70px"}}><IndianRupee size={13}/>12L - 20L</div>
+                            <div style={{color: "#5B7690" , fontWeight: "600" , margin: "10px", marginLeft: "70px"}}>Posted 1 Day ago</div>
+                            <div className="btnAlign">
+                                <button className="btnSave"> <Bookmark />Save</button>
+                                <button className="btnApply">Apply Now <SquareArrowOutUpRight /></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="Googlejob">
+                        <img src="https://play-lh.googleusercontent.com/mlWjVjxflQoYJHBBgDQ08FqT8i3KnDG__2RH8P-GWOKlEPAIo8TllTZo3HDQ3J5zlO6oAhc1FAv0Bf2on0wL8w=s256-rw" alt="loading..." style={{width: "50px" , height: "50px", borderRadius: "40px" , marginTop: "28px", marginRight: "10px"}} />
+                        <div className="Software">
+                            <div className="RoleName">Software Engineer</div>
+                        <div className="companyName">Google</div>
+                        <div className="joiningdetail">
+                            <div className="iconAll"> <MapPin  size={13} /> Bangalore, India</div>
+                        <div  className="iconAll"> <BriefcaseBusiness size={13}/> Full Time</div>
+                        <div  className="iconAll"><StarCheck size={13} />0-2 Yrs</div>
+                        </div>
+                        <div className="jobdescript">Work on scalable systems and help build products used by billions..</div>
+                        </div>
+                        <div>
+                            <div className="iconAll" style={{color: "#f5b501" , fontWeight: "600",marginTop: "20px", fontSize: "20px", marginLeft: "70px"}}><IndianRupee size={13}/>12L - 20L</div>
+                            <div style={{color: "#5B7690" , fontWeight: "600" , margin: "10px", marginLeft: "70px"}}>Posted 1 Day ago</div>
+                            <div className="btnAlign">
+                                <button className="btnSave"> <Bookmark />Save</button>
+                                <button className="btnApply">Apply Now <SquareArrowOutUpRight /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 </div>
                 
             </div>
