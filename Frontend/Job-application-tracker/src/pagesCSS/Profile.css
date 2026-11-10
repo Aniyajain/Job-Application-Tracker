@@ -30,3 +30,16 @@
     top: 18%;
 
 }
+.pageHeadline{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1130px;
+    margin-top: 20px;
+    
+}
+.InfoBox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import "../pagesCSS/Logout.css";
-import {Search ,Bell, CircleUser, LogOut, Bookmark , SquarePlus, LayoutGrid , House, Goal, BriefcaseBusiness, MapPin, ChartNoAxesColumnIncreasing, IndianRupee , RotateCcw, StarCheck , SquareArrowOutUpRight}from "lucide-react";
+import "../pagesCSS/Profile.css";
+import {Search ,Bell, CircleUser, LogOut, Bookmark , SquarePlus, LayoutGrid , House, Goal, BriefcaseBusiness, MapPin, ChartNoAxesColumnIncreasing, IndianRupee , RotateCcw, StarCheck , SquareArrowOutUpRight, User, Pencil, ScrollText, Mail, Phone, GraduationCap  }from "lucide-react";
 import IITDLOGO from "../assets/IITDLOGO.png";
 import { Navigate, useNavigate } from "react-router-dom";
 function Profile(){
@@ -42,7 +42,53 @@ function Profile(){
                            
                            <div className="goal"> <Goal  size={34}/>Small steps everyday leads to big career goals</div>
                        </div>
-       
+
+                       <div>
+                        <div className="pageHeadline">
+
+                        <div style={{display: "flex", flexDirection: "row" , fontSize: "34px" , marginLeft: "15px", gap: "12px"}}>
+                            <div style={{color: "#f5b501"}}><User size={34} /></div>
+                        <div style={{color: "#f5b501"}}>My Profile</div>
+                        </div>
+                        <div ><button style={{borderRadius: "12px" , backgroundColor: "white", color: "#f5b501" , border:"2px solid #f5b501", padding: "8px" , display: "flex", alignItems: "center" , justifyContent: "center" , fontWeight: "bold" , gap: "7px" , marginLeft: "12px" , fontSize: "15px" , width: "160px"}}><Pencil /> Edit Profile</button></div>
+                       </div>
+                       <div style={{marginLeft: "10px" , color: "gray", fontSize: "19px"}}>View and manage your information</div>
+                       
+                       <div className="InfoBox">
+                       <div style={{width: "340px"}}>
+                         <div><img src="https://img.magnific.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80" alt="loading.." style={{width: "90%", marginLeft: "20px"}} /></div>
+                        <div style={{marginLeft: "90px"}}><button style={{color: " #f5b501", display: "flex" , alignItems: "center" , justifyContent: "center", gap: "12px" , padding: "9px", backgroundColor: "white", borderRadius: "12px" , border: "2px solid #f5b501" , fontWeight: "bold", fontSize: "17px" }}><Pencil/> Change Photo</button></div>
+                       </div>
+                       <div style={{border: "2px solid rgb(175, 175, 175)" , borderRadius: "12px", width:"600px" , height: "500px", padding: "18px"  }}>
+                        <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginLeft: "10px", fontSize: "30px", marginBottom: "10px" }}> <ScrollText />Personal Details</div>
+                        <div style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
+                            <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "10px" }}> <User/>Name</div>
+                        <div>Aniya Jain</div>
+                        </div>
+                       <div  style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
+                         <div style={{display: "flex" , alignItems: "center" ,  gap: "12px" , marginBottom: "10px" }}><Mail />Email</div>
+                        <div>aniyajain@gmail.com</div>
+                       </div>
+                        <div  style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
+                            <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "10px" }}> <Phone />Mobile</div>
+                        <div>782345091</div>
+                        </div>
+                       <div style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
+                         <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "10px" }}> <GraduationCap />Education</div>
+                        <div>Mits Gwalior</div>
+                       </div>
+                        <div style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
+                            <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "10px" }}> <MapPin/>Location</div>
+                        <div>Gwalior , India</div>
+                        </div>
+                        <div style={{display: "flex", flexDirection: "row" , gap: "12px", fontSize: "21px"}}>
+                            <div style={{display: "flex" , alignItems: "center" ,  gap: "12px" , marginBottom: "10px" }}> <User/>About Me</div>
+                        <div>final Year Btech Student will full stack development skills</div>
+                        </div>
+                       </div>
+                       </div>
+                       </div>
+                       
              </div>
        
                </div>
