@@ -56,51 +56,52 @@ function Application(){
     </div>
     <table>
         <thead>
-            <tr>
+            <tr  className="PreviousdataHeading">
                 <th>Company </th>
                 <th>Role</th>
                 <th>Appiled on</th>
                 <th>Status </th>
                 <th>Action</th>
             </tr>
-            <tr>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjeX6ku69_92RMDzmUn_e0swxsNonUDN2JaTZ_XamgOw&s=10" style={{width: "30px"}}  /> Google</td>
+            <tr className="Previousdata">
+                <td className="ImgName"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjeX6ku69_92RMDzmUn_e0swxsNonUDN2JaTZ_XamgOw&s=10" style={{borderRadius: "50%" , width: "30px" , height:"30px" }} /> Google</td>
                 <td>Software Engineer</td>
                 <td>Aug 25, 2026</td>
                 <td> <span className="Applied">Applied</span></td>
                  <td><span><Eye /> <Trash style={{color:"red"}} /></span></td>
             </tr>
-            <tr>
-                <td><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/3840px-Microsoft_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" style={{width: "30px"}}  /> Microsoft</td>
+            <tr className="Previousdata">
+                <td className="ImgName"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/3840px-Microsoft_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" style={{borderRadius: "50%" , width: "30px" , height:"30px" }}  /> Microsoft</td>
                 <td>SDE Intern</td>
                 <td>Sept 30, 2026</td>
                  <td><span className="Applied">Applied</span></td>
                  <td><span><Eye /> <Trash  style={{color:"red"}}/></span></td>
             </tr>
-            <tr>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmTPqlHJAqy2bZ17t_YF1pc9pBmqt_2z7L-AfLRBmoA&s=10" alt="" style={{width: "30px"}} />Flipkart</td>
+            <tr className="Previousdata">
+                <td className="ImgName"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPmTPqlHJAqy2bZ17t_YF1pc9pBmqt_2z7L-AfLRBmoA&s=10" alt="loading.." style={{borderRadius: "50%" , width: "30px" , height:"30px" }}/>Flipkart</td>
                 <td>Research Intern</td>
                 <td>Sept 25, 2026</td>
                 <td><span className="interview">Interview</span></td>
                 <td><span><Eye /> <Trash style={{color:"red"}} /></span></td>
             </tr>
-            <tr>
-                <td><img src="https://companieslogo.com/img/orig/ACN-cce5b411.png?t=1720244490" alt="" style={{width: "30px"}} />Accenture</td>
+            <tr className="Previousdata">
+                <td className="ImgName"><img src="https://companieslogo.com/img/orig/ACN-cce5b411.png?t=1720244490" alt="loading..." style={{borderRadius: "50%" , width: "30px" , height:"30px" }} />Accenture</td>
                 <td>Web Developer Associate</td>
                 <td>Sept 20, 2026</td>
                 <td><span className="Reject">Rejected</span></td>
                 <td><span><Eye /> <Trash style={{color:"red"}} /></span></td>
             </tr>
-            <tr>
-                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTadVVT-RI1hIIQsPkYo9uK4Bvj_O2naJVyHPZVRQjMcLP4ulU8LPtQ5H8&s=10" alt="" style={{width: "30px"}} /> TCS</td>
+            <tr className="Previousdata">
+                <td className="ImgName"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTadVVT-RI1hIIQsPkYo9uK4Bvj_O2naJVyHPZVRQjMcLP4ulU8LPtQ5H8&s=10" alt="loading..." style={{borderRadius: "50%" , width: "30px" , height:"30px" }} /> TCS</td>
                 <td>Software Developer</td>
                 <td>Sept 28, 2026</td>
                 <td><span className="interview">Interview</span></td>
                 <td><span><Eye /> <Trash style={{color:"red"}} /></span></td>
             </tr>
-            <tr>
+            <tr className="Previousdata">
                 <td>Showing 1-5 of 5 applications </td>
                 <td>
+                    
                     <button><ChevronLeft size={14}  /></button>
                     <span>1</span>
                     <button><ChevronRight size={14} /></button>
