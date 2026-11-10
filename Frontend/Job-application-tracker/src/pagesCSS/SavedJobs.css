@@ -1,0 +1,32 @@
+.bdy{
+    margin: 0px;
+    padding: 0px;
+}
+.topalignment1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+.bell{
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.user{
+    display: flex;
+    gap: 30px;
+    margin-right: 20px;
+    margin-top: 6px;
+}
+.bell >div:first-child{
+    position : relative;
+}
+.bell > div:first-child svg{
+    position : absolute;
+    right: 10px;
+    top: 18%;
+
+}

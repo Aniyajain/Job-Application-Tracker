@@ -1,6 +1,6 @@
 import react from "react"
 import "../pagesCSS/AddApplication.css";
-import {Search ,Bell, CircleUser, LogOut, Bookmark , SquarePlus, LayoutGrid , House, Goal, BriefcaseBusiness, MapPin, ChartNoAxesColumnIncreasing, IndianRupee , RotateCcw, StarCheck , SquareArrowOutUpRight}from "lucide-react";
+import {Search ,Bell, CircleUser, LogOut, Bookmark , SquarePlus, LayoutGrid , House, Goal, BriefcaseBusiness, MapPin, ChartNoAxesColumnIncreasing, IndianRupee , RotateCcw, StarCheck , SquareArrowOutUpRight, ChevronRight , ChevronLeft }from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import IITDLOGO from "../assets/IITDLOGO.png";
 function AddApplication(){
@@ -157,6 +157,14 @@ function AddApplication(){
                                 <button className="btnSave"> <Bookmark />Save</button>
                                 <button className="btnApply">Apply Now <SquareArrowOutUpRight /></button>
                             </div>
+                        </div>
+                    </div>
+                    <div className="AllAppli">
+                        <div style={{fontWeight: "bold"}}>Showing 1-5 of 5 applications</div>
+                        <div>
+                            <button className="leftbtn"><ChevronLeft size={14}  /></button>
+                            <span className="pageNo">1</span>
+                            <button className="rightbtn"><ChevronRight size={14} /></button>
                         </div>
                     </div>
                 </div>
