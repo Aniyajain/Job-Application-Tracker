@@ -20,7 +20,7 @@ function App() {
       <Route path="/Applications" element={<Application />} />
       <Route path="/Logout" element={<Logout />} />
       <Route path="/Profile" element={<Profile />} />
-      <Route path="/SvaedJobs" element={<SavedJobs />} />
+      <Route path="/SavedJobs" element={<SavedJobs />} />
     </Routes>
   );
 }

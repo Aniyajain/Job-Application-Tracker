@@ -1,8 +1,8 @@
 import React from "react";
 import "../pagesCSS/SavedJobs.css";
-import {Search ,Bell, CircleUser, LogOut, Bookmark , SquarePlus, LayoutGrid , House, Goal, BriefcaseBusiness, MapPin, ChartNoAxesColumnIncreasing, IndianRupee , RotateCcw, StarCheck , SquareArrowOutUpRight}from "lucide-react";
+import {Search ,Bell, CircleUser, LogOut, Bookmark , SquarePlus, LayoutGrid , House, Goal, BriefcaseBusiness, MapPin, ChartNoAxesColumnIncreasing, IndianRupee , RotateCcw, StarCheck , SquareArrowOutUpRight , ArrowRight}from "lucide-react";
 import IITDLOGO from "../assets/IITDLOGO.png";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 function SavedJobs(){
     const navigate = useNavigate();
     return(
@@ -42,6 +42,28 @@ function SavedJobs(){
                                   
                                   <div className="goal"> <Goal  size={34}/>Small steps everyday leads to big career goals</div>
                               </div>
+
+                              <div style={{
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "flex-start",
+    width: "100%",
+    padding: "0 20px"
+}}>
+                                <div>
+                                    <div  style={{display: "flex" , alignItems: "center" , gap: "10px" , color : "#f5b501" , fontSize : "34px" , fontWeight: "bold", marginLeft : "20px" , marginBottom : "10px" , marginTop : "10px"}}> <Bookmark  size={34}/>Saved Jobs</div>
+                                <div style={{fontSize: "20px" , marginLeft : "20px" , color: "gray"}}>Jobs you have saved for later. Don't miss out on these opportunity ! </div>
+                                </div>
+                                <div style={{display: "flex" , alignItems: "center" , gap: "10px" , color: "#f5b501" , fontSize: "24px"}}>View All <ArrowRight /></div>
+                                
+                              </div>
+                               <div>
+                                <div>
+                                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_%22G%22_logo.svg/3840px-Google_%22G%22_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="loading..."  style={{width: "50%"}}/>
+                                </div>
+                              </div>
+                             
               
                     </div>
               

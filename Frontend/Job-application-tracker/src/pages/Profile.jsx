@@ -60,30 +60,31 @@ function Profile(){
                         <div style={{marginLeft: "90px"}}><button style={{color: " #f5b501", display: "flex" , alignItems: "center" , justifyContent: "center", gap: "12px" , padding: "9px", backgroundColor: "white", borderRadius: "12px" , border: "2px solid #f5b501" , fontWeight: "bold", fontSize: "17px" }}><Pencil/> Change Photo</button></div>
                        </div>
                        <div style={{border: "2px solid rgb(175, 175, 175)" , borderRadius: "12px", width:"600px" , height: "500px", padding: "18px"  }}>
-                        <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginLeft: "10px", fontSize: "30px", marginBottom: "10px" }}> <ScrollText />Personal Details</div>
+                        <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginLeft: "10px", fontSize: "30px", marginBottom: "10px" , fontWeight: "bold" , fontSize: "24px"}}> <ScrollText size={34} />Personal Details</div>
                         <div style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
-                            <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "10px" }}> <User/>Name</div>
-                        <div>Aniya Jain</div>
+                            <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "20px" , marginTop: "20px" }}> <User/>Name</div>
+                        <div style={{ marginBottom: "20px" , marginTop: "20px" , marginLeft: "40px"}}>Aniya Jain</div>
                         </div>
                        <div  style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
-                         <div style={{display: "flex" , alignItems: "center" ,  gap: "12px" , marginBottom: "10px" }}><Mail />Email</div>
-                        <div>aniyajain@gmail.com</div>
+                         <div style={{display: "flex" , alignItems: "center" ,  gap: "12px" , marginBottom: "20px" , marginTop: "20px" }}><Mail />Email</div>
+                        <div style={{ marginBottom: "20px" , marginTop: "20px" , marginLeft: "40px"}}>aniyajain@gmail.com</div>
                        </div>
                         <div  style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
-                            <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "10px" }}> <Phone />Mobile</div>
-                        <div>782345091</div>
+                            <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "20px", marginTop: "20px" }}> <Phone />Mobile</div>
+                        <div style={{ marginBottom: "20px" , marginTop: "20px" , marginLeft: "40px"}}>782345091</div>
                         </div>
                        <div style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
-                         <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "10px" }}> <GraduationCap />Education</div>
-                        <div>Mits Gwalior</div>
+                         <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "20px" , marginTop: "20px" }}> <GraduationCap />Education</div>
+                        <div style={{ marginBottom: "20px" , marginTop: "20px" , marginLeft: "30px"}}>Mits Gwalior</div>
                        </div>
                         <div style={{display: "flex", flexDirection: "row" , gap: "12px" , fontSize: "21px"}}>
-                            <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "10px" }}> <MapPin/>Location</div>
-                        <div>Gwalior , India</div>
+                            <div style={{display: "flex" , alignItems: "center" , gap: "12px", marginBottom: "20px" , marginTop: "20px" }}> <MapPin/>Location</div>
+                        <div style={{ marginBottom: "20px" , marginTop: "20px" , marginLeft: "40px"}}>Gwalior , India</div>
                         </div>
+                        <div style={{borderBottom: "2px solid rgb(175, 175, 175)" , marginTop: "10px"}}></div>
                         <div style={{display: "flex", flexDirection: "row" , gap: "12px", fontSize: "21px"}}>
-                            <div style={{display: "flex" , alignItems: "center" ,  gap: "12px" , marginBottom: "10px" }}> <User/>About Me</div>
-                        <div>final Year Btech Student will full stack development skills</div>
+                            <div style={{display: "flex" , alignItems: "center" ,  gap: "12px" , marginBottom: "20px" , marginTop: "20px", fontWeight: "bold" , fontSize: "24px" }}> <User size={38}/>About Me</div>
+                        <div style={{ marginBottom: "20px" , marginTop: "20px" , marginLeft: "20px"}}>final Year Btech Student will full stack development skills</div>
                         </div>
                        </div>
                        </div>
