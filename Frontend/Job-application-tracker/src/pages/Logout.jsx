@@ -33,11 +33,11 @@ function Logout(){
                 <div className="pt1">
                            <div>
                                <div className="bt1" onClick={()=>navigate("/Main")}> <House   /> Dashboard</div>
-                           <div className="bt1"> <LayoutGrid />Application</div>
+                           <div className="bt1" onClick={()=>navigate("/Applications")}> <LayoutGrid />Application</div>
                            <div className="bt1" onClick={()=>(navigate("/Add"))}> <SquarePlus />Add Applications</div>
-                           <div className="bt1"> <Bookmark />Saved Jobs</div>
-                           <div className="bt1"> <CircleUser  />Profile</div>
-                           <div className="bt1"> <LogOut />Logout</div>
+                           <div className="bt1" onClick={()=>navigate("/SavedJobs")}> <Bookmark />Saved Jobs</div>
+                           <div className="bt1" onClick={()=>navigate("/Profile")}> <CircleUser  />Profile</div>
+                           <div className="bt1" onClick={()=>navigate("/Logout")}> <LogOut />Logout</div>
                            </div>
                            
                            <div className="goal"> <Goal  size={34}/>Small steps everyday leads to big career goals</div>

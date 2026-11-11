@@ -30,3 +30,18 @@
     top: 18%;
 
 }
+.jobsSaved{
+    border: 2px solid #D5E2EE;
+      background-color: #F0F5FA;
+      padding: 14px;
+      border-radius: 12px;
+      margin-left: 35px;
+      margin-top: 28px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 130%;
+      height: 110px;
+      color: #345875;
+
+}
