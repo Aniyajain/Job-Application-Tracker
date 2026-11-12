@@ -23,6 +23,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import IITDLOGO from "../assets/IITDLOGO.png";
 import { useState } from "react";
+import {ToastContainer, toast} from "react-toastify"
 function AddApplication() {
   const navigate = useNavigate();
   const [title, setTitle] = useState("");
@@ -30,7 +31,30 @@ function AddApplication() {
   const [jobtype, setJobType] = useState("");
   const [experience, setExperience] = useState("Any Experience");
   const [salary, setSalary] = useState(0);
+  const JobData = async()=>{
+    try {
+      const response = await axios.post("https://in.jooble.org/api/50ddb796-c2f4-48fc-83fe-b068dfc3f000" , {
+        title : title,
+        location : location,
+        jobtype : jobtype,
+        experience: experience,
+        salary : salary
+
+
+      });
+      if(response.status == 200){
+        toast.success("Data send successfully");
+
+      }
+    } catch (error) {
+      if(response.status == 500){
+        toast.error("Enter all  data correctly");
+      }
+    }
+
+  }
   return (
+    <>
     <div>
       <div className="topalignment1">
         <div className="logotitle">
@@ -42,6 +66,7 @@ function AddApplication() {
           />
           <h1>Job Application Tracker</h1>
         </div>
+        <ToastContainer/>
         <div className="bell">
           <div>
             {" "}
@@ -233,8 +258,8 @@ function AddApplication() {
                   Reset
                 </button>
                 <button className="btnSearch">
-                  {" "}
-                  <Search size={19}  onClick={}/> Search
+                  
+                  <Search size={19}  onClick={JobData} /> Search
                 </button>
               </div>
             </div>
@@ -414,6 +439,7 @@ function AddApplication() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
