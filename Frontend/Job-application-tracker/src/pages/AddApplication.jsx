@@ -1,5 +1,6 @@
-import react from "react";
+import axios from "axios";
 import "../pagesCSS/AddApplication.css";
+// import "react-toastify/dist/ReactToastify.css";
 import {
   Search,
   Bell,
@@ -33,7 +34,7 @@ function AddApplication() {
   const [salary, setSalary] = useState(0);
   const JobData = async()=>{
     try {
-      const response = await axios.post("https://in.jooble.org/api/50ddb796-c2f4-48fc-83fe-b068dfc3f000" , {
+      const response = await axios.post("http://localhost:5000/jobapi/createJob" , {
         title : title,
         location : location,
         jobtype : jobtype,
@@ -46,9 +47,13 @@ function AddApplication() {
         toast.success("Data send successfully");
 
       }
+      console.log(response.data);
+      
     } catch (error) {
-      if(response.status == 500){
+      if(error.response && error.response.status == 500){
         toast.error("Enter all  data correctly");
+      }else{
+        toast.error("something went wrong");
       }
     }
 
@@ -257,9 +262,9 @@ function AddApplication() {
                   <RotateCcw />
                   Reset
                 </button>
-                <button className="btnSearch">
+                <button className="btnSearch" onClick={JobData}>
                   
-                  <Search size={19}  onClick={JobData} /> Search
+                  <Search size={19}   /> Search
                 </button>
               </div>
             </div>
